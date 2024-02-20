@@ -60,7 +60,7 @@ export const SignInThree = (props) => {
     if(concatenatedCode === code && counter > 0){
         setIsMessageError(false);
         try {
-            const response = await fetch('http://localhost:3090/api/register-user', {
+            const response = await fetch('/api/register-user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export const SignInThree = (props) => {
     e.preventDefault();
 
     try {
-        const response = await fetch('http://localhost:3090/api/send-email', {
+        const response = await fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

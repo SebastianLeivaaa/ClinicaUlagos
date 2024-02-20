@@ -1,7 +1,5 @@
 import express from "express";
-import sendTestEmail from "../src/utils/mailer.js";
 import cors from 'cors';
-import { generatorCode } from "../src/utils/generatorCode.js";
 import postgres from "postgres";
 import dotenv from "dotenv";
 
@@ -25,24 +23,8 @@ const app = express();
 app.use(express.json());
 const port = 3090;
 app.use(cors());
-const SENDER_EMAIL_ID = "clinicaulagos@gmail.com";
 
-app.post("/api/send-email", async (req, res) => {
-  const { email } = req.body;
 
-  try {
-    if (SENDER_EMAIL_ID === "EMAIL_ID") {
-      throw new Error(
-        "Please update SENDER_EMAIL_ID with your email id in server.js"
-      );
-    }
-    const code = generatorCode();
-    const info = await sendTestEmail(code, email);
-    res.send({ info: info, code: code });
-  } catch (error) {
-    res.send(error);
-  }
-});
 
 app.listen(port, async () => {
   try {
