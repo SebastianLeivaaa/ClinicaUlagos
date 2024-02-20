@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logoClinica from "../assets/img/logoClinica.png";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 export const SignIn = () => {
@@ -81,7 +82,7 @@ export const SignIn = () => {
                         <input id="paPhone" name="phone" type="tel" className="m-auto w-full border-border border-[0.5px] py-1 px-1.5" placeholder="Ej:958472045" onChange={handleChange} required />
                     </div>
                     <div className="text-center object-cover w-[25%] m-auto rounded-md mt-16 col-span-2 items-center">
-                        <button onClick={handleSubmit} className="text-white-50 rounded-md p-1.5 bg-blue-600 hover:bg-blue-700 w-full m-auto">Cree su contraseña</button>
+                        <button onClick={handleSubmit} className="text-white-50 rounded-md p-1.5 bg-blue-600 hover:bg-blue-700 w-full m-auto flex flex-row gap-x-1 items-center justify-center font-bold"><MdKeyboardArrowRight className="text-2xl"/> CREE SU CONTRASEÑA </button>
                     </div>
                 </form>
             </section>

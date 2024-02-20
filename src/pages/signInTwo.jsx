@@ -32,7 +32,7 @@ export const SignInTwo = (props) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('/api/send-email', {
+            const response = await fetch('http://localhost:3090/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -85,10 +85,10 @@ export const SignInTwo = (props) => {
                         </ul>
                     </div>
                     <div className="text-end flex w-[100%] mt-16 col-span-2 items-end justify-end">
-                        {validationPasswordFour.test(passwordData.password) && passwordData.password === passwordData.confirmPassword ? (
-                            <button  onClick={handleSubmit} className="text-white-50 rounded-md bg-blue-600 hover:bg-blue-700 p-1.5 px-3 flex flex-row items-center gap-x-1"><FaCheck/> CREAR CONTRASEÑA</button>
+                        {validationPasswordGeneral.test(passwordData.password) && passwordData.password === passwordData.confirmPassword ? (
+                            <button  onClick={handleSubmit} className="text-white-50 rounded-md bg-blue-600 hover:bg-blue-700 p-1.5 px-3 flex flex-row items-center gap-x-1 font-bold"><FaCheck/> CREAR CONTRASEÑA</button>
                         ) : (
-                            <button className="text-white-50 rounded-md bg-gray-300 p-1.5 px-3  flex flex-row items-center gap-x-1" disabled><FaCheck/> CREAR CONTRASEÑA</button>
+                            <button className="text-white-50 rounded-md bg-gray-300 p-1.5 px-3  flex flex-row items-center gap-x-1 font-bold" disabled><FaCheck/> CREAR CONTRASEÑA</button>
                         )}
                     </div>
                 </form>

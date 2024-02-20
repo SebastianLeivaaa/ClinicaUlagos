@@ -8,6 +8,7 @@ import { Home } from './pages/home';
 import { SignIn } from './pages/signIn';
 import { SignInTwo } from './pages/signInTwo';
 import { SignInThree } from './pages/signInThree';
+import { SignInFinal } from './pages/signInFinal';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/sign-in" element={<SignIn/>} />
         <Route path="/sign-in-two" element={<SignInTwo/>}/>
         <Route path="/sign-in-three" element={<SignInThree/>}/>
+        <Route path="/sign-in-final" element={<SignInFinal/>}/>
       </Routes>
     </div>
   )
