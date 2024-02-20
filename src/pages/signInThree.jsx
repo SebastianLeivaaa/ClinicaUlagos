@@ -54,7 +54,7 @@ export const SignInThree = (props) => {
     e.preventDefault();
     if(concatenatedCode === code){
         try {
-            const response = await fetch('http://localhost:3090/api/register-user', {
+            const response = await fetch('/api/register-user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

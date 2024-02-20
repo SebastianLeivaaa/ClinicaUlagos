@@ -32,7 +32,7 @@ export const SignInTwo = (props) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3090/api/send-email', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
