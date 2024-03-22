@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavBar } from '../components/NavBar';
-import { AccordionSection } from '../components/accordionSection';
+import { PacientOptions } from '../components/pacientOptions';
 
 export const Home = () => {
     return(
         <div className="w-full">
             <NavBar/>
-            <AccordionSection/>
+            <PacientOptions/>
         </div>
     );
 }

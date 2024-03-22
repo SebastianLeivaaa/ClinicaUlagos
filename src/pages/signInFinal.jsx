@@ -1,6 +1,6 @@
 import React from "react";
 import logoClinica from "../assets/img/logoClinica.png";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaCheck } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 
@@ -16,8 +16,29 @@ export const SignInFinal = () => {
                 <div className="flex flex-row align-items-center items-end py-5 gap-x-10 justify-between w-[100%] max-md:py-2">
                     <img src={logoClinica} className='w-60 h-full' alt="Logo Clínica"></img>
                 </div>
-                <div className="bg-blue-500">
-                    <h1>HOLA</h1>
+                <div className="bg-blue-700 flex flex-row items-center w-[100%] max-md:w-[100%] p-6 justify-center m-auto gap-x-2">
+                    <div className="flex flex-row items-center gap-x-1.5">
+                        <div class="flex items-center justify-center h-6 w-6 rounded-full bg-blue-500 p-2 opacity-80"> 
+                            <span class="text-blue-900 font-bold text-base"><FaCheck/></span> 
+                        </div>                         
+                        <p className="text-white-50 font-bold">Completar datos</p>
+                    </div>
+                    <div className="h-0.5 grow shrink flex basis-auto bg-white-50">
+                    </div>
+                    <div className="flex flex-row items-center gap-x-1.5">
+                        <div class="flex items-center justify-center h-6 w-6 rounded-full bg-blue-500 p-2 opacity-80"> 
+                            <span class="text-blue-900 font-bold text-base"><FaCheck/></span> 
+                        </div>
+                        <p className="text-white-50 font-bold">Crear clave</p>
+                    </div>
+                    <div className="h-0.5 grow shrink flex basis-auto bg-white-50">
+                    </div>
+                    <div className="flex flex-row items-center gap-x-1.5">
+                        <div class="flex items-center justify-center h-6 w-6 rounded-full bg-blue-500 p-2 opacity-80"> 
+                            <span class="text-blue-900 font-bold text-base"><FaCheck/></span> 
+                        </div>
+                        <p className="text-white-50 font-bold">Confirme cuenta</p>
+                    </div>
                 </div>
             </header>
             <section className="mt-16 w-[100%] flex flex-col gap-y-8 px-24">

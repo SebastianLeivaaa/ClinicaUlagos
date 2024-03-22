@@ -1,14 +1,15 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
 
-import { NavBar } from './components/NavBar'
-import { AccordionSection } from './components/accordionSection'
 import { Login } from './pages/login';
 import { Home } from './pages/home';
 import { SignIn } from './pages/signIn';
 import { SignInTwo } from './pages/signInTwo';
 import { SignInThree } from './pages/signInThree';
 import { SignInFinal } from './pages/signInFinal';
+import { TimeReservationTwo } from './pages/timeReservationTwo';
+import { TimeReservationFinal } from './pages/timeReservationFinal';
+import { HomeLogin } from './pages/homeLogin';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         <Route path="/sign-in-two" element={<SignInTwo/>}/>
         <Route path="/sign-in-three" element={<SignInThree/>}/>
         <Route path="/sign-in-final" element={<SignInFinal/>}/>
+        <Route path="/time-reservation-two" element={<TimeReservationTwo/>}/>
+        <Route path="/time-reservation-final" element={<TimeReservationFinal/>}/>
+        <Route path="/home-login" element={<HomeLogin/>}/>
       </Routes>
     </div>
   )
